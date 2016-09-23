@@ -519,7 +519,9 @@
         interfaceSection.items = @[[[WCEasySettingsSwitch alloc] initWithIdentifier:@"fullScreenSettings"
                                                                               title:@"Full Screen Settings"],
                                    [[WCEasySettingsSwitch alloc] initWithIdentifier:@"showFPS"
-                                                                              title:@"Show FPS"]];
+                                                                              title:@"Show FPS"],
+                                   [[WCEasySettingsSwitch alloc] initWithIdentifier:@"mirrorDisplay"
+                                                                              title:@"Mirror Display"]];
         
         
         // Credits

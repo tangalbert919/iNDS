@@ -354,6 +354,9 @@ enum VideoFilter : NSUInteger {
         int filterTranslate[] = {NONE, EPX, SUPEREAGLE, _2XSAI, SUPER2XSAI, BRZ2x, LQ2X, BRZ3x, HQ2X, HQ4X, BRZ4x, BRZ5x};
         NSInteger filter = [[NSUserDefaults standardUserDefaults] integerForKey:@"videoFilter"];
         EMU_setFilter(filterTranslate[filter]);
+        
+        // Mirror Display
+        [self performSelector:@selector(screenChanged:) withObject:notification];
     }
     self.directionalControl.style = [defaults integerForKey:@"controlPadStyle"];
     self.fpsLabel.hidden = ![defaults integerForKey:@"showFPS"];
@@ -403,7 +406,7 @@ enum VideoFilter : NSUInteger {
     self.controllerContainerView.alpha = [[NSUserDefaults standardUserDefaults] floatForKey:@"controlOpacity"];
     self.startButton.alpha = [[NSUserDefaults standardUserDefaults] floatForKey:@"controlOpacity"];
     self.selectButton.alpha = [[NSUserDefaults standardUserDefaults] floatForKey:@"controlOpacity"];
-    if ([UIScreen screens].count > 1) {
+    if ([UIScreen screens].count > 1 && ![[NSUserDefaults standardUserDefaults] boolForKey:@"mirrorDisplay"]) {
         CGSize screenSize = [UIScreen screens][1].bounds.size;
         CGSize viewSize = CGSizeMake(MIN(screenSize.width, screenSize.height * 1.333), MIN(screenSize.width, screenSize.height * 1.333) * 0.75);
         glkView[0].frame = CGRectMake(screenSize.width/2 - viewSize.width/2, screenSize.height/2 - viewSize.height/2, viewSize.width, viewSize.height);
@@ -420,7 +423,7 @@ enum VideoFilter : NSUInteger {
 - (void)screenChanged:(NSNotification*)notification
 {
     [self pauseEmulation];
-    if ([UIScreen screens].count > 1) {
+    if ([UIScreen screens].count > 1 && ![[NSUserDefaults standardUserDefaults] boolForKey:@"mirrorDisplay"]) {
         UIScreen *extScreen = [UIScreen screens][1];
         extScreen.currentMode = extScreen.availableModes[0];
         extWindow = [[UIWindow alloc] initWithFrame:extScreen.bounds];
@@ -466,7 +469,7 @@ enum VideoFilter : NSUInteger {
     //self.context.multiThreaded = YES;
     NSLog(@"Is multi: %d", self.context.isMultiThreaded);
     
-    if ([UIScreen screens].count > 1) {
+    if ([UIScreen screens].count > 1 && ![[NSUserDefaults standardUserDefaults] boolForKey:@"mirrorDisplay"]) {
         UIScreen *extScreen = [UIScreen screens][1];
         extScreen.currentMode = extScreen.availableModes[0];
         extWindow = [[UIWindow alloc] initWithFrame:extScreen.bounds];
