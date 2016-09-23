@@ -199,6 +199,7 @@ enum VideoFilter : NSUInteger {
     [notificationCenter addObserver:self selector:@selector(screenChanged:) name:UIScreenDidDisconnectNotification object:nil];
     [notificationCenter addObserver:self selector:@selector(controllerActivated:) name:GCControllerDidConnectNotification object:nil];
     [notificationCenter addObserver:self selector:@selector(controllerDeactivated:) name:GCControllerDidDisconnectNotification object:nil];
+    [[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:@"mirrorDisplay" options:NSKeyValueObservingOptionNew context:NULL];
     
     if ([[GCController controllers] count] > 0) {
         [self controllerActivated:nil];
@@ -338,6 +339,13 @@ enum VideoFilter : NSUInteger {
     
 }
 
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if([keyPath isEqual: @"mirrorDisplay"] && emuLoopLock) {
+        [self performSelector:@selector(screenChanged:)];
+    }
+}
+
 - (void)defaultsChanged:(NSNotification*)notification
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -354,9 +362,6 @@ enum VideoFilter : NSUInteger {
         int filterTranslate[] = {NONE, EPX, SUPEREAGLE, _2XSAI, SUPER2XSAI, BRZ2x, LQ2X, BRZ3x, HQ2X, HQ4X, BRZ4x, BRZ5x};
         NSInteger filter = [[NSUserDefaults standardUserDefaults] integerForKey:@"videoFilter"];
         EMU_setFilter(filterTranslate[filter]);
-        
-        // Mirror Display
-        [self performSelector:@selector(screenChanged:) withObject:notification];
     }
     self.directionalControl.style = [defaults integerForKey:@"controlPadStyle"];
     self.fpsLabel.hidden = ![defaults integerForKey:@"showFPS"];
@@ -418,6 +423,7 @@ enum VideoFilter : NSUInteger {
 {
     EMU_closeRom();
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:@"mirrorDisplay"];
 }
 
 - (void)screenChanged:(NSNotification*)notification
