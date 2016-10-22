@@ -24,6 +24,7 @@
 		4651B9C81C323B3300857FB6 /* iCadeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4651B9C61C323B3300857FB6 /* iCadeReaderView.m */; };
 		46C587631C502F9F00CE47BD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46C587651C502F9F00CE47BD /* MainStoryboard.storyboard */; };
 		4C3F2AED178E017600AE10B8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3F2AEC178E017600AE10B8 /* Twitter.framework */; };
+		59B9AF091DBB07610010734A /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59B9AF071DBB07610010734A /* tinyxml2.cpp */; };
 		8B28306B178DDC7F00E92785 /* iNDSDonationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B28306A178DDC7F00E92785 /* iNDSDonationViewController.m */; };
 		8B4895C5178CE15D00BA61C3 /* iNDSROMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4895C4178CE15D00BA61C3 /* iNDSROMTableViewController.m */; };
 		8BEA096A17872C190060B347 /* iNDSButtonControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096717872C190060B347 /* iNDSButtonControl.m */; };
@@ -123,10 +124,6 @@
 		BFCFE222176634AF000A70CF /* libfat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE215176634AF000A70CF /* libfat.cpp */; };
 		BFCFE223176634AF000A70CF /* lock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE216176634AF000A70CF /* lock.cpp */; };
 		BFCFE224176634AF000A70CF /* partition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE218176634AF000A70CF /* partition.cpp */; };
-		BFCFE22B176634C6000A70CF /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE225176634C6000A70CF /* tinystr.cpp */; };
-		BFCFE22C176634C6000A70CF /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE227176634C6000A70CF /* tinyxml.cpp */; };
-		BFCFE22D176634C6000A70CF /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE229176634C6000A70CF /* tinyxmlerror.cpp */; };
-		BFCFE22E176634C6000A70CF /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE22A176634C6000A70CF /* tinyxmlparser.cpp */; };
 		BFCFE23C176634EE000A70CF /* slot1_none.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE230176634EE000A70CF /* slot1_none.cpp */; };
 		BFCFE23D176634EE000A70CF /* slot1_r4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE231176634EE000A70CF /* slot1_r4.cpp */; };
 		BFCFE23E176634EE000A70CF /* slot1_retail_nand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE232176634EE000A70CF /* slot1_retail_nand.cpp */; };
@@ -312,6 +309,12 @@
 		4651B9C61C323B3300857FB6 /* iCadeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCadeReaderView.m; sourceTree = "<group>"; };
 		4651B9C71C323B3300857FB6 /* iCadeState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCadeState.h; sourceTree = "<group>"; };
 		4C3F2AEC178E017600AE10B8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		59B9AF071DBB07610010734A /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml2.cpp; path = tinyxml/tinyxml2.cpp; sourceTree = "<group>"; };
+		59B9AF081DBB07610010734A /* tinyxml2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinyxml2.h; path = tinyxml/tinyxml2.h; sourceTree = "<group>"; };
+		59B9AF0B1DBB09310010734A /* asm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = asm.h; path = desmume/src/utils/lightning/sparc/asm.h; sourceTree = SOURCE_ROOT; };
+		59B9AF0C1DBB09310010734A /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = core.h; path = desmume/src/utils/lightning/sparc/core.h; sourceTree = SOURCE_ROOT; };
+		59B9AF0D1DBB09310010734A /* fp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fp.h; path = desmume/src/utils/lightning/sparc/fp.h; sourceTree = SOURCE_ROOT; };
+		59B9AF0E1DBB09310010734A /* funcs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = funcs.h; path = desmume/src/utils/lightning/sparc/funcs.h; sourceTree = SOURCE_ROOT; };
 		8B28306A178DDC7F00E92785 /* iNDSDonationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iNDSDonationViewController.m; path = iNDS/donation/iNDSDonationViewController.m; sourceTree = SOURCE_ROOT; };
 		8B4895C4178CE15D00BA61C3 /* iNDSROMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iNDSROMTableViewController.m; path = iNDS/roms/iNDSROMTableViewController.m; sourceTree = SOURCE_ROOT; };
 		8BEA096017872BF90060B347 /* iNDSROMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iNDSROMTableViewController.h; path = iNDS/roms/iNDSROMTableViewController.h; sourceTree = SOURCE_ROOT; };
@@ -527,12 +530,6 @@
 		BFCFE217176634AF000A70CF /* lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lock.h; path = desmume/src/utils/libfat/lock.h; sourceTree = SOURCE_ROOT; };
 		BFCFE218176634AF000A70CF /* partition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = partition.cpp; path = desmume/src/utils/libfat/partition.cpp; sourceTree = SOURCE_ROOT; };
 		BFCFE219176634AF000A70CF /* partition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = partition.h; path = desmume/src/utils/libfat/partition.h; sourceTree = SOURCE_ROOT; };
-		BFCFE225176634C6000A70CF /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinystr.cpp; path = desmume/src/utils/tinyxml/tinystr.cpp; sourceTree = SOURCE_ROOT; };
-		BFCFE226176634C6000A70CF /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinystr.h; path = desmume/src/utils/tinyxml/tinystr.h; sourceTree = SOURCE_ROOT; };
-		BFCFE227176634C6000A70CF /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml.cpp; path = desmume/src/utils/tinyxml/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
-		BFCFE228176634C6000A70CF /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinyxml.h; path = desmume/src/utils/tinyxml/tinyxml.h; sourceTree = SOURCE_ROOT; };
-		BFCFE229176634C6000A70CF /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlerror.cpp; path = desmume/src/utils/tinyxml/tinyxmlerror.cpp; sourceTree = SOURCE_ROOT; };
-		BFCFE22A176634C6000A70CF /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlparser.cpp; path = desmume/src/utils/tinyxml/tinyxmlparser.cpp; sourceTree = SOURCE_ROOT; };
 		BFCFE230176634EE000A70CF /* slot1_none.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot1_none.cpp; path = desmume/src/addons/slot1_none.cpp; sourceTree = SOURCE_ROOT; };
 		BFCFE231176634EE000A70CF /* slot1_r4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot1_r4.cpp; path = desmume/src/addons/slot1_r4.cpp; sourceTree = SOURCE_ROOT; };
 		BFCFE232176634EE000A70CF /* slot1_retail_nand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot1_retail_nand.cpp; path = desmume/src/addons/slot1_retail_nand.cpp; sourceTree = SOURCE_ROOT; };
@@ -850,6 +847,17 @@
 				4651B9C71C323B3300857FB6 /* iCadeState.h */,
 			);
 			path = iCade;
+			sourceTree = "<group>";
+		};
+		59B9AF0A1DBB09140010734A /* sparc */ = {
+			isa = PBXGroup;
+			children = (
+				59B9AF0B1DBB09310010734A /* asm.h */,
+				59B9AF0C1DBB09310010734A /* core.h */,
+				59B9AF0D1DBB09310010734A /* fp.h */,
+				59B9AF0E1DBB09310010734A /* funcs.h */,
+			);
+			name = sparc;
 			sourceTree = "<group>";
 		};
 		8BEA095217872BB50060B347 /* iOS */ = {
@@ -1244,12 +1252,8 @@
 		BFCFE200176510DC000A70CF /* tinyxml */ = {
 			isa = PBXGroup;
 			children = (
-				BFCFE225176634C6000A70CF /* tinystr.cpp */,
-				BFCFE226176634C6000A70CF /* tinystr.h */,
-				BFCFE227176634C6000A70CF /* tinyxml.cpp */,
-				BFCFE228176634C6000A70CF /* tinyxml.h */,
-				BFCFE229176634C6000A70CF /* tinyxmlerror.cpp */,
-				BFCFE22A176634C6000A70CF /* tinyxmlparser.cpp */,
+				59B9AF071DBB07610010734A /* tinyxml2.cpp */,
+				59B9AF081DBB07610010734A /* tinyxml2.h */,
 			);
 			name = tinyxml;
 			sourceTree = "<group>";
@@ -1276,6 +1280,7 @@
 		BFCFE24817663521000A70CF /* JIT */ = {
 			isa = PBXGroup;
 			children = (
+				59B9AF0A1DBB09140010734A /* sparc */,
 				AE20890D19163FF700E2CB33 /* i386 */,
 				BF2AC479177FF29000D3CF93 /* arm */,
 				BF2AC482177FF29000D3CF93 /* asm-common.h */,
@@ -1756,6 +1761,11 @@
 				CLASSPREFIX = iNDS;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = iNDS;
+				TargetAttributes = {
+					BFCFE0EE1764FBD3000A70CF = {
+						DevelopmentTeam = EYJDE3N63W;
+					};
+				};
 			};
 			buildConfigurationList = BFCFE0EA1764FBD3000A70CF /* Build configuration list for PBXProject "iNDS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1922,6 +1932,7 @@
 				CA4258141CADBD4900BFD05E /* MBProgressHUD.m in Sources */,
 				BFCFE1A317650FB0000A70CF /* texcache.cpp in Sources */,
 				BFCFE1A417650FB0000A70CF /* thumb_instructions.cpp in Sources */,
+				59B9AF091DBB07610010734A /* tinyxml2.cpp in Sources */,
 				CA031CCA1BEBDC4F00EDE98D /* unzip.c in Sources */,
 				CA8EA1401C37C3FB0082A3F8 /* RBVolumeButtons.m in Sources */,
 				BFCFE1A517650FB0000A70CF /* version.cpp in Sources */,
@@ -1989,10 +2000,6 @@
 				CA6882271CDC19B400B0ED05 /* WCBuildStoreClient.m in Sources */,
 				CAB2C4B71CB5F2C300ED22BB /* EZAudioFFT.m in Sources */,
 				BFCFE224176634AF000A70CF /* partition.cpp in Sources */,
-				BFCFE22B176634C6000A70CF /* tinystr.cpp in Sources */,
-				BFCFE22C176634C6000A70CF /* tinyxml.cpp in Sources */,
-				BFCFE22D176634C6000A70CF /* tinyxmlerror.cpp in Sources */,
-				BFCFE22E176634C6000A70CF /* tinyxmlparser.cpp in Sources */,
 				BFCFE23C176634EE000A70CF /* slot1_none.cpp in Sources */,
 				BFCFE23D176634EE000A70CF /* slot1_r4.cpp in Sources */,
 				CA031D2C1BEBE1EB00EDE98D /* Ppmd7Dec.c in Sources */,
@@ -2219,7 +2226,7 @@
 		BFCFE1161764FBD3000A70CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon${BUNDLE_ICON_SET_SUFFIX}";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
 				BUNDLE_DISPLAY_NAME_SUFFIX = Alpha;
 				BUNDLE_ICON_SET_SUFFIX = Debug;
@@ -2229,6 +2236,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.6.0;
+				DEVELOPMENT_TEAM = EYJDE3N63W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -2261,7 +2269,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ApprenticeMediaLLC.iNDS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.InfiniteDevelopment.iNDS;
 				PRODUCT_NAME = iNDS;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2273,7 +2281,7 @@
 		BFCFE1171764FBD3000A70CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon${BUNDLE_ICON_SET_SUFFIX}";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
 				BUNDLE_DISPLAY_NAME_SUFFIX = "";
 				BUNDLE_ICON_SET_SUFFIX = "";
@@ -2283,6 +2291,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.6.0;
+				DEVELOPMENT_TEAM = EYJDE3N63W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -2315,7 +2324,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ApprenticeMediaLLC.iNDS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.InfiniteDevelopment.iNDS;
 				PRODUCT_NAME = iNDS;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

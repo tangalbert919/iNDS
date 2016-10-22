@@ -418,22 +418,22 @@
                                   ];
         
         // Video
-        WCEasySettingsSection *graphicsSection = [[WCEasySettingsSection alloc] initWithTitle:@"Video" subTitle:@"Video Options"];
+        WCEasySettingsSection *graphicsSection = [[WCEasySettingsSection alloc] initWithTitle:@"Video" subTitle:@"Choose your graphics filter here."];
         WCEasySettingsOption *filterOptions = [[WCEasySettingsOption alloc] initWithIdentifier:@"videoFilter"
                                                                              title:@"Video Filter"
-                                                                        options:@[@"None",
+                                                                        options:@[@"None (Default)",
                                                                                   @"EPX",
                                                                                   @"Super Eagle",
                                                                                   @"2xSaI",
                                                                                   @"Super 2xSaI",
-                                                                                  @"BRZ 2x (Recommended)",
+                                                                                  @"BRZ 2x",
                                                                                   @"Low Quality 2x",
                                                                                   @"BRZ 3x",
                                                                                   @"High Quality 2x",
                                                                                   @"High Quality 4x",
                                                                                   @"BRZ 4x"]
                                                                    optionSubtitles:nil
-                                                                        subtitle:@"Video filters make the picture sharper but can cause the emulator to run slower. Filters are ordered by lowest quality at the top to best at the bottom. If you're not sure, you can experiment or pick the highest quality that still makes games run at 60fps."];
+                                                                        subtitle:@"Video filters make the grpahics look better, but reduces performance. For balanced performance and graphics, choose the highest filter that your device can run at 60 FPS."];
         graphicsSection.items = @[filterOptions];
 //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //            NSArray *filters = @[@(NONE), @(EPX), @(SUPEREAGLE), @(_2XSAI), @(SUPER2XSAI), @(BRZ2x), @(LQ2X), @(BRZ3x), @(HQ2X), @(HQ4X), @(BRZ4x)];
@@ -449,7 +449,7 @@
 //        });
         
         // Audio
-        WCEasySettingsSection *audioSection = [[WCEasySettingsSection alloc] initWithTitle:@"Audio" subTitle:@""];
+        WCEasySettingsSection *audioSection = [[WCEasySettingsSection alloc] initWithTitle:@"Audio" subTitle:@"Adjust audio settings here."];
         audioSection.items = @[[[WCEasySettingsSwitch alloc] initWithIdentifier:@"disableSound"
                                                                           title:@"Disable Sound"],
                                [[WCEasySettingsSwitch alloc] initWithIdentifier:@"ignoreMute"
@@ -489,13 +489,14 @@
                                                                               @"JIT Recompiler (Beta)"
                                                                               ]
                                                             optionSubtitles:nil
-                                                                   subtitle:@"Warning, JIT is still experimental and can slow down or even crash iNDS"];
+                                                                   subtitle:@"Warning, JIT is still experimental and can slow down or even crash iNDS!"];
         } else if (sizeof(void*) == 8) {
             engineOption = [[WCEasySettingsOption alloc] initWithIdentifier:@"cpuMode"
                                                                       title:@"Emulator Engine"
-                                                                    options:@[@"Interpreter"]
+                                                                    options:@[@"Interpreter",
+                                                                              @"JIT Recompiler (Beta)"]
                                                             optionSubtitles:nil
-                                                                   subtitle:@"JIT is not yet available for your device."];
+                                                                   subtitle:@"WARNING: Do not run or the app will crash EVERY time you play any of your ROM files!"];
         }
         
         coreSection.items = @[engineOption,
@@ -539,7 +540,7 @@
                                                                  subtitle:@"Ported DeSmuME to iOS"
                                                                       url:nil],
                                  [[WCEasySettingsUrl alloc] initWithTitle:@"DeSmuME"
-                                                                 subtitle:@"Emulatiion Core"
+                                                                 subtitle:@"Emulation Core"
                                                                       url:@"http://www.desmume.org/"],
                                  [[WCEasySettingsUrl alloc] initWithTitle:@"Wiki Creator"
                                                                  subtitle:@"Pmp174"
