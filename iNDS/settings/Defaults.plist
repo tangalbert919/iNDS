@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>videoFilter</key>
-	<integer>5</integer>
+	<integer>-1</integer>
 	<key>enableMic</key>
 	<true/>
 	<key>volumeBumper</key>

@@ -1,14 +1,16 @@
 iNDS
 =======
-###### Supports iOS 8.1 and up.
+###### iOS 8.1 or above required.
 
-iNDS is a derivation of the previous Nintendo DS apps for iOS, nds4ios and Nitrogen. 
+###### This version of iNDS contains code from other forks. This is simply an experiment to see if a bunch of developers from many places can truly benefit iNDS when the original developer is too busy to answer any questions.
+
+iNDS is a derivation of the previous Nintendo DS apps for iOS, nds4ios and Nitrogen. Both are discontinued, or have been removed due to the DMCA takedown.
 
 [Nitrogen](https://github.com/NitrogenEmulator) 
 
-Currently, emulation is powered by the DeSmuME threaded ARM interpreter and runs at nearly full speed on the iPhone 5 and above.
+Currently, emulation is powered by the DeSmuME 0.9.10 threaded ARM interpreter and runs at full speed on 64-bit devices (for some games).
 
-Due to the need to mmap the entire ROM into memory, older devices with only 256MB of RAM are not supported. These devices include the iPod touch 4, iPad 1, iPhone 3GS, and anything below those devices.
+Any device that only has 256 MB of RAM will crash if a ROM is loaded. Such devices include the iPhone 3GS, iPad 1, iPod 4, and everything that precedes them.
 
 [iNDS](http://www.williamlcobb.com/iNDS.html)
 
@@ -16,7 +18,7 @@ Due to the need to mmap the entire ROM into memory, older devices with only 256M
 
 Installing iNDS
 ------------------------
-All Instructions on building and installing iNDS can be found [here](https://github.com/WilliamLCobb/iNDS/wiki)
+All Instructions on building and installing iNDS can be found [here](https://github.com/WilliamLCobb/iNDS/wiki). 
 
 Reporting Bugs
 ------------------------
@@ -39,6 +41,7 @@ To-do
 ###### Planned improvments
 * Internal Resolution changes
 * GNU Lightning JIT (JAILBROKEN DEVICES ONLY)
+* DeSmuME 0.9.11 engine (will be put on new branch)
 * Sharing roms between devices
 * Sharable game hacks
 * Add more localizations

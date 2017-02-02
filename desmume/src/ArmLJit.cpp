@@ -25,11 +25,14 @@
 
 #include "utils/lightning/lightning.h"
 #if defined(__arm__) || defined(__arm64__)
-#import "utils/lightning/arm/funcs.h"
 #import "utils/lightning/arm/core.h"
+#import "utils/lightning/arm/funcs.h"
+#elif defined(__sparc__)
+#import "utils/sparc/funcs.h"
+#import "utils/sparc/core.h"
 #else
-#import "utils/lightning/i386/funcs.h"
 #import "utils/lightning/i386/core.h"
+#import "utils/lightning/i386/funcs.h"
 #endif
 
 #include "armcpu.h"
