@@ -8,8 +8,7 @@ iNDS uses [DeSmuME](http://desmume.org), a Nintendo DS emulator that was built f
 
 ## Requirements:
 * iOS 8.1 or above (iOS 9.0 if you are compiling from the master branch).
-* Your device must be 64-bit (iPad Air, iPad Mini 2, iPhone 5S, iPod 6G, and everything newer than these).
-* Your device must have 512 MB of RAM or more (which doesn't matter because that only affects some 32-bit devices).
+* Your device must have 512 MB of RAM or more (which means the iPhone 3GS, iPad 1, the iPod 5G, and anything older).
 * If you're compiling from source code, you need an Apple computer or a virtual hard disk and a program to run said hard disk. Please refer to this [wiki](https://github.com/WilliamLCobb/iNDS/wiki) for instructions on compiling the program.
 
 ## Issues:
@@ -22,7 +21,7 @@ These guidelines are to be followed, or I will close your issue without the need
 * Where you got iNDS from.
 
 **Your issue will be closed if it is about:**
-* Support for 32-bit devices.
+* Anything irrelevant (or unrelated to iNDS).
 * Support for devices less than 256 MB of RAM.
 
 **DISCLAIMER:** The Nintendo DS is a trademark of Nintendo, Inc. All games made by Nintendo or third parties that support the Nintendo DS belong to them, not us. We are not responsible for what you do to your device from running this program. Do not download iNDS from sources you don't know, because it is very easy to install a backdoor on this kind of software.
