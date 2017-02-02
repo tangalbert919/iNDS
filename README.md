@@ -4,7 +4,7 @@ This is iNDS, a Nintendo DS emulator built for the iOS platform, and based on tw
 
 Because this is a fork from the [real iNDS project](https://github.com/WilliamLCobb/iNDS), expect some weird commits and experimental stuff on here.
 
-iNDS uses [DeSmuME](http://desmume.org), a Nintendo DS emulator that was built for computers, but has been ported to mobile devices so people on the go can play their favorite DS games (none of which are included in this project or we would have copyright issues). The v1 branch in this fork utilizes DeSmuME 0.9.10, which is older but has been worked on recently. The master branch has DeSmuME 0.9.11, which is still in the works like the rest of iNDS, as we are preparing for a 2.0 release. Therefore, I advise everyone to stick to the official project or the v1 branch on thie fork, because the master branch is not stable, and not user-friendly.
+iNDS uses [DeSmuME](http://desmume.org), a Nintendo DS emulator that was built for computers, but has been ported to mobile devices so people on the go can play their favorite DS games (none of which are included in this project or we would have copyright issues). The v1 branch in this fork utilizes DeSmuME 0.9.10, which is older but has been worked on recently. The master branch has DeSmuME 0.9.11, which is still in the works like the rest of iNDS, as we are preparing for a 2.0 release. Therefore, I advise everyone to stick to the official project or the v1 branch on this fork, because the master branch is not stable, and not user-friendly.
 
 ## Requirements:
 * iOS 8.1 or above (iOS 9.0 if you are compiling from the master branch).
